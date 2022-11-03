@@ -12,10 +12,19 @@ import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "employee")
+@Data @AllArgsConstructor @NoArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Employee {
+	
+	
+
+	
 
 	@Id
 	@Column(name = "emp_id")
@@ -23,12 +32,12 @@ public class Employee {
 	private int id;
 	
 	@Column(nullable = false)
-	private String fristName;
+	private String firstName;
 	@Column(nullable = false)
 	private String lastName;
 	
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
-	private DepartmentEnum Department;
+	private DepartmentEnum department;
 	
 }
