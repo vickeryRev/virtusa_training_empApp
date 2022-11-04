@@ -40,7 +40,7 @@ public class EmployeeController {
 	}
 	
 	//get all employees by departments
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity<Set<Employee>> getAll(){
 		return ResponseEntity.ok(empService.getAllByDepartment());
 	}

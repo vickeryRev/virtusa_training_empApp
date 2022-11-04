@@ -32,7 +32,7 @@ public class EmployeeService {
 	@Transactional(readOnly = true)
 	public Set<Employee> getAllByDepartment(){
 		System.out.println("get all emps attempted");
-		return empRepo.findByOrderByDepartment().stream().collect(Collectors.toSet()); 
+		return empRepo.findAllByOrderByDepartmentAsc().stream().collect(Collectors.toSet()); 
 	}
 
 }
