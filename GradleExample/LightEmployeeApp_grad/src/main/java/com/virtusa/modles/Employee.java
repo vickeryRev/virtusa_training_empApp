@@ -33,17 +33,11 @@ public class Employee {
 	
 	@Column(nullable = false)
 	private String firstName;
-	
 	@Column(nullable = false)
 	private String lastName;
 	
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private DepartmentEnum department;
-	
-	@Column(nullable = false, name="email")
-	private String email;
-	
-	
 	
 }
