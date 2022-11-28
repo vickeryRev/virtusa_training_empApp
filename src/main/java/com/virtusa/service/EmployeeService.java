@@ -25,8 +25,9 @@ public class EmployeeService {
 
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
 	public Employee add(Employee emp) {
-		System.out.println("Worked");
+		
 		return empRepo.save(emp);
+		
 
 	}
 	@Transactional(readOnly = true)

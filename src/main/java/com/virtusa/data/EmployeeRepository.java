@@ -11,4 +11,6 @@ import com.virtusa.modles.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	List<Employee> findAllByOrderByDepartmentAsc();
+	
+	
 }
